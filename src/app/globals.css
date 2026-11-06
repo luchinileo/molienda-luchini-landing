@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+/* Paleta de la marca. Todos los pares texto/fondo pasan WCAG AA (contraste >= 4.5:1). */
+@theme {
+  --color-crema: #f7f1e8;
+  --color-crema-oscura: #ede3d3;
+  --color-espresso: #2b1d14;
+  --color-tostado: #6b5545;
+  --color-terracota: #9a4320;
+  --color-terracota-oscura: #7d361a;
+
+  --font-sans: var(--font-inter);
+  --font-display: var(--font-fraunces);
+}
+
+html {
+  color-scheme: light;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-crema);
+  color: var(--color-espresso);
+}
+
+/* Respeta a quien pidió menos animaciones en su sistema operativo. */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
