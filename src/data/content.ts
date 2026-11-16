@@ -69,16 +69,16 @@ export const HOURS = [
 ] as const;
 
 export const CONTACT = {
-  address: "Calle Harwen 2012, Barrio Andorra",
-  phone: "(2901) 64-9478",
-  phoneHref: "tel:+542901649478",
+  address: "Av. Maipú 640, Ushuaia",
+  phone: "(2901) 55-0123",
+  phoneHref: "tel:+542901550123",
 } as const;
 
 // WhatsApp usa el número internacional sin "+" y con el 9 de celular argentino.
 export const SOCIAL = [
   { network: "instagram", label: "Instagram", handle: "@moliendaluchini", href: "https://instagram.com/moliendaluchini" },
   { network: "facebook", label: "Facebook", handle: "Molienda Luchini", href: "https://facebook.com/moliendaluchini" },
-  { network: "whatsapp", label: "WhatsApp", handle: "(2901) 64-9478", href: "https://wa.me/5492901649478" },
+  { network: "whatsapp", label: "WhatsApp", handle: "(2901) 55-0123", href: "https://wa.me/5492901550123" },
 ] as const;
 
 export type SocialNetwork = (typeof SOCIAL)[number]["network"];
