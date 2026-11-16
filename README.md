@@ -2,6 +2,11 @@
 
 Landing page responsive para **Molienda Luchini**, un café de especialidad de barrio: presentación, menú con
 precios, opiniones, horarios, formulario de reserva con validación y redes sociales.
+Es un proyecto de portfolio: el negocio, los precios, las opiniones y los datos de contacto son ficticios.
+
+> 🔗 **Demo:** https://luchinileo.github.io/molienda-luchini-landing/
+
+<img src="docs/capturas/inicio.jpg" width="640" alt="Página completa en escritorio"> <img src="docs/capturas/movil.jpg" width="220" alt="Inicio en el celular">
 
 ## Tecnologías
 
@@ -39,3 +44,12 @@ src/
 ├── components/   # Header, Hero, Features, Menu, Testimonials, Visit, ReservationForm, Footer
 └── data/         # todo el contenido de la página
 ```
+
+## Deploy
+
+Se publica como sitio estático en **GitHub Pages**. `next.config.ts` usa `output: "export"`, así que
+`pnpm build` genera HTML, CSS y JS en la carpeta `out/`, sin necesidad de un servidor de Node.
+
+Cada push a `main` ejecuta [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml): instala con pnpm,
+corre el lint, compila con `BASE_PATH=/molienda-luchini-landing` (la subcarpeta donde vive el sitio) y publica.
+Hay que activarlo una sola vez en *Settings → Pages → Source: GitHub Actions*.
